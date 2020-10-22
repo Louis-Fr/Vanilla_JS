@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - I 01 introduction</title>
+    <!-- mes styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script JS dans l'entête -->
+    <script>
+        /* let : pour déclarer une variable */
+        document.addEventListener('DOMContentLoaded', function(){
+            let bonjour = document.getElementById('b1');
+            bonjour.addEventListener('click', coucou);
+
+            function coucou(){
+                alert('coucou, c\'est encore moi');// le caractèere d'échappement pour avoir dans la chaine de caractère l'apostrophe
+            }
+        });
+
+    </script>
+ 
+</head>
+<body>
+    <div id="container">
+    <h1>JS - I 03 introduction</h1>
+    <button id="b1">Cliquez sur moi</button>
+    <button id="b2">Ajoutez un paragraphe</button>
+    </div>
+
+    <script>
+
+        let ajouter = document.getElementById('b2');
+        ajouter.addEventListener('click', ajout);
+
+        function ajout (){
+            let para = document.createElement('p');
+            para.textContent = 'Pagraphe ajouté';
+            document.body.appendChild(para);
+        }
+    </script>
+    
+</body>
+</html>
