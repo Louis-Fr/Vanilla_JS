@@ -7,6 +7,8 @@ body {
 wrapper {
     background-color: #fff;
     width: 80%;
+    margin: auto;
+    padding: 10px;
 }
 
 /* pour surligner le texte en jaune */
@@ -14,4 +16,15 @@ wrapper {
     background-color: yellow;
 }
 
+code {
+    color: red;
+}
+
 /* les titres */
+
+h1 {
+    background-color: pink;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
