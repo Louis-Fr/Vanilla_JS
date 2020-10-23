@@ -22,3 +22,37 @@ monAge = 40;
 console.log(prenom);
 console.log(monAge);
 
+prenom='25';
+prenom='Justine';
+
+console.log(monAge);
+
+// ceci ne fonctionne pas
+// nom='Rey';
+// var nom;
+
+console.log(nom);
+
+// ceci ne fonctionne pas
+let ville='Suresnes';
+
+console.log(ville);
+
+// avec prompt() on a une fenêtre avec champ de saisie
+// prompt ();
+
+// redéclaration des variables
+
+// ceci fonctionne 
+var chien='Médor'
+var chien='Max'
+
+console.log(chien);
+
+// ceci ne fonctionne pas
+
+// let chat = 'minou'
+// let chat = 'obi-wan'
+
+// alert();
+

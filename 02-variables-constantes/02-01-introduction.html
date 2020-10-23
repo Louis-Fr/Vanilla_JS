@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS - II 01 introduction</title>
+    <title>JS - II 02-affichers</title>
     <!-- mes styles -->
     <link rel="stylesheet" href="../css/style.css">
     <script src="introduction.js" async></script>
 </head>
 <body>
     <div id="container">
-        <h1>JS - II 01 introduction</h1>
+        <h1>JS - II 02-afficher</h1>
         <h2>1 - Qu'est-ce qu'une variable?</h2>
         <p>Une variable est un conteneur servant à stocker des informations de manière temporaires, du texte (une chaîne de caractère) ou un nombre. La variable varie !</p>
         <p>Elle stocke différentes valeurs au fil du temps.</p>
@@ -35,6 +35,38 @@
         <p>quand la variable est vide on dit que l'on stocke une valeur ou qu'on initialise une variable</p>
 
         <h2>4- Différence entre "var" et "let"</h2>
+        <p><code>let</code>est plus récent que<code>var</code>mais ils ont la même fonction</p>
+
+        <ul>
+            <li>
+                <h3>A - La remontée ou hoisting des variables</h3>
+                <p>Avec <code>var</code>on peut déclarer la variable avant de l'affecter cf : introduction.js ligne 32</p>
+            </li> 
+
+            <li>
+                <h3>B - La redéclaration des variables</h3>
+                <p>Avec var on avait le droit de déclarer plusieurs fois une même variable en utilisant chaque fois var (ce qui avait pour effet de modifier la valeur stockée).</p>
+            </li>
+
+            <li>
+                <h3>C- La portée des variables</h3>
+                <p>La portée d'une variable désigne l'endroit ou cette variable va pouvoir être utilisée dans un script</p>
+                <p>Nous reparlerons donc de cette portée des variables nous aborderons les fonctions en JavaScript</p>
+            </li>
+
+            <li>
+                <h3>Conclusion- Let ou var</h3>
+                <p>La syntaxe de déclaration des variables avec let correspond à la nouvelle syntaxe, la syntaxe avec var est l'ancienne syntaxe, vouée à disparaître</p>
+                <p class="stabilo">Vous devriez donc aujourd'hui toujours utiliser le mot clef let pour déclarer vos variables</p>
+            </li>
+        </ul>
+
+        <h2>5- Quelle utilité pour les variables</h2>
+        <p>Il sera pratique de stocker différents types de données ou d'informations dans un variable</p>
+        <p>Exemple avec la fonction <code>prompt()</code> on récupèrera une donnée envoyée par un utilisateur, on fera un script qui contiendra une variable qui stockera la donnée quand elle sera envoyée.</p>
+
+        <h2>6- Comment afficher le contenu d'une variable?</h2>
+        <p>cf. <a href="02-02-afficher.html">une page avec des exemples</a></p>
     </div>
 </body>
 </html>
