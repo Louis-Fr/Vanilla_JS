@@ -1,15 +1,15 @@
-// les scripts pour l'intro sur les variables
+// les scripts pour l'introduction sur les variables
 // mon second fichier JS
 // création de 3 variables, cependant elles ne stocke par de valeurs
 
-
 let prenom;
 let MonAge;
-
 var ville;
+
 // ici on déclare une variable et on l'intialise en même temps
 let prenom = 'Jean'; 
-// une chaîne de caractères
+
+// string : chaîne de caractères
 
 /* Pour initialiser une variable on utilise l'opérateur = CE N'EST PAS LE SIGNE EGAL !!!
 c'est un opérateur d'affectation */
@@ -17,7 +17,8 @@ c'est un opérateur d'affectation */
 // Autre moyen d'initialiser une variable 
 let monAge;
 monAge = 40;
-// un chiffre ! pas besoin de ''
+
+// quand la variable est un chiffre, pas besoin de '' !
 
 console.log(prenom);
 console.log(monAge);
@@ -27,7 +28,7 @@ prenom='Justine';
 
 console.log(monAge);
 
-// ceci ne fonctionne pas
+// ceci ne fonctionne pas, on déclare toujours la variable avant la valeur
 // nom='Rey';
 // var nom;
 
