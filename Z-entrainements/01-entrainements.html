@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 Entraînement</title>
+    <!-- style pour la page -->
+    <style>
+        body {
+            background-color: lightgrey;
+            color: brown;
+        }
+    </style>
+    <!-- script dans l'en tête -->
+    <script>
+        document.write('<h1>01 Entrainement JS</h1>'); 
+
+        document.write ('<h2 style="background: orange; width: 75%; color: aqua;">1- Affichage</h2>');
+
+        document.write ('<p>Page de test</p>')
+        
+       
+        
+        var maBoite;
+        maBoite = 10;
+        let monAge = 12;
+        
+        document.write('<p>dans la variable maBoite il y a ' + maBoite + '</p>');
+
+        console.log(maBoite);
+        console.log('Un message dans le log');
+        console.info(monAge);
+
+        // // alert
+        // alert("Alerte! ceci est un message d'alerte");
+        // utiliser les "" évite d'utiliser le caractères d'échappement pour les apostrophes.
+
+        // boîte confirm()
+        // confirm('Confirmez-vous?');
+
+        
+        var sonChien = prompt('Quel est le prenom de votre chien? ');
+        document.write('<p>Votre chien s\appelle' + sonChien + '.</p>');
+
+        let humeur = prompt('comment va?');
+        document.write('<p>Alors ca va?' + humeur + '</p>' );
+
+        // portée locale ou globale de la variable !!!
+
+
+        if(true){
+            var nombre = 9;
+        }
+
+        console.log(nombre);
+
+        let nombre2;
+
+        if(true){
+            nombre2 = 18;
+        }
+
+        console.log(nombre2);
+
+        // addition de valeurs
+        var fruits = 'pommes';
+        console.info(fruits);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
