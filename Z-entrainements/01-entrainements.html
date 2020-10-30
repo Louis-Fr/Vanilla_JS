@@ -14,13 +14,13 @@
     <!-- script dans l'en tête -->
     <script>
         document.write('<h1>01 Entrainement JS</h1>'); 
-
+    
+        // titre 2
         document.write ('<h2 style="background: orange; width: 75%; color: aqua;">1- Affichage</h2>');
 
         document.write ('<p>Page de test</p>')
         
        
-        
         var maBoite;
         maBoite = 10;
         let monAge = 12;
@@ -65,6 +65,75 @@
         // addition de valeurs
         var fruits = 'pommes';
         console.info(fruits);
+
+        fruits += ' - fraises';
+        console.info(fruits);
+
+        fruits += ' - mangues';
+        console.info(fruits);
+
+        document.write(fruits);
+
+        // avec une valeur numérique
+        var noteEval = 12;
+        console.info (noteEval);
+
+        noteEval += 2;
+        console.info(noteEval);
+
+
+        // titre 2
+        document.write ('<h2 style="background: orange; width: 75%; color: aqua;">1- Affichage</h2>');
+
+        var monTexte = 'Voici une phrase pour Audrey, avec l\'apostrophe';
+        console.info(typeof(monTexte));
+
+        document.write(typeof(noteEval) + '<br>');
+        document.write(typeof(monTexte) + '<br>');
+
+        // titre 3
+        document.write('<h2 style="background: orange;width: 75%;color: #fff;">3- Constantes</h2>'); 
+
+        // on ne peut pas la redéfinir
+        const BOUGE_PAS = "Ma constante impossible à modifier !";
+
+        document.write('<p style="background: grey;">' + BOUGE_PAS + '</p>')
+
+        // Titre 4 
+        document.write('<h2 style="background: orange;width: 75%;color: #fff;" title="lr mot qui plaît à Adurey !">4- Concaténer</h2>');
+        
+        let prenom = 'Bruce', nom = 'Willis';
+        //  + ' ' + pour rajouter un espace
+        document.write(prenom + ' ' + nom);
+
+        // titre 5 Opérateurs numériques
+        document.write('<h2> style="background: orange;width: 75%;color: #fff;" title="">5- Opérateurs numériques</h2>');
+
+        // addition
+        let addition = 10 + 15;
+        document.write('<p>Une addition : ' + addition + '</p>');
+        console.log(addition);
+
+        // multiplication
+        let multiplication = 10 * 15;
+        document.write('<p>Une multiplication': + multiplication + '</p>');
+
+        // soustraction
+        var soustraction = 10 - 5;
+        document.write('<p>Une soustraction : ' + soustraction + '</p>');
+
+        // division 
+        var division = 10 / 3;
+        document.write('<p>Une division' + division + '</p>');
+
+        // modulo
+        var modulo = 10 % 3;
+        console.log(modulo);
+        document.write('<p>Le modulo' : + modulo + '</p>');   
+        
+        // EXO 
+        document.write('<h3>Un petit exercice dans une prompt() et une alrtes')
+
 
     </script>
 </head>
