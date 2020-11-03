@@ -186,13 +186,40 @@
         //te
             // condition est remplie : a et b sont-ils égaux en type de contenu et en valeur?
 
-            if() {
-
+            if ( a === b ) { // test sur valeur et type
+                document.write('<p>Pour a qui vaut ' + a + ' et b qui vaut ' + b + ' a et b sont égaux et sont tous les deux de même type </p>');
             }else{
-
+                document.write('<p>Pour a qui vaut ' + a + ' et b qui vaut ' + b + ' a est diffèrent de b en type et/ou en valeur</p>');   
             }
 
-            
+            // EXO : tester la valeur de a par rapport au chiffre 5 ; inférieur? égal ? supérieur ?  ou alors c'est pas un nombre, dans une condition multiple
+
+            if (a < 1){
+                alert('a est inférieur au chiffre 5');
+            } else if  (a == 5){
+                alert('la valeur de a est égal au chiffre 5')
+            } else if (a > 5){
+                alert('la valeur de a est supérieur au chiffre 5');
+            } else if (typeof String) {
+                alert("la valeur de a n'est pas un nombre");
+            }
+             
+            // EXO A est-il supérieur à B et B est-il supérieur à C
+
+            if ( a > b && b > c ) {
+                document.write('<p>Pour a qui vaut '+ a +', b qui vaut '+ b +' et c qui vaut '+ c +'a est supérieur a b ET b est supérieur à C</p>');
+            } else {
+                document.write('<p> Ici on teste si a '+ a +' est sup. à b ' + b +' ET si b est sup. à c '+ c +' mais dans ce cas au moins une des deux conditions n\est pas remplie</p>);
+            }   
+
+            // EXO : a est supérieur à b OU b est supérieur à c
+
+            if (a > b || b > c) {
+                document.write('<p>Ici "on teste si A qui vaut '+ a +' est supérieur à B qui vaut'+ b +' ou si B est supérieure à c qui vaut '+ c +' : ici au moins une des deux conditions est vraie. </p>');
+            } else {
+                document.write('<p>ici on teste l'égalité </p>')
+            }
+
     </script>
 </head>
 <body>

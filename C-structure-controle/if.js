@@ -1,4 +1,4 @@
-// .js pour la page sur if else
+// .js pour la page sur if
 
 let x = 4;
 let y = 0;
