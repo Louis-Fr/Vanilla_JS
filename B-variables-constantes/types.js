@@ -11,3 +11,6 @@ console.log(typeof presentation);
 // 3 - puis on concatène une string et le résultat de la fonction typeof()
 document.getElementById('p1').innerHTML = 'Type de données pour la variable présentation :' + typeof presentation;
 
+let test;
+test = 'null';
+console.log(typeof test);

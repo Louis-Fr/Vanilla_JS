@@ -17,8 +17,9 @@ alert(sncf);
 // console log pour afficher le contenu de la variable dans la console du navigateur
 console.log(sncf);
 console.log(codePostal);
-console.log(typeof sncf);
+console.log(typeof codePostal);
 
-alert(404);
+alert(999);
 
 console.log(404);
+

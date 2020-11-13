@@ -13,9 +13,20 @@
     </style>
     <!-- script dans l'en tête -->
     <script>
+
+        /*
+        PAGE ENTRAINEMENT
+        1- AFFICHAGE
+        2- TYPES DE DONNEES 
+        3- CONSTANTES
+        4- CONCATENER
+        5- OPERATEURS NUMERIQUES
+        6- CONDITIONS
+        */
+
         document.write('<h1>01 Entrainement JS</h1>'); 
     
-        // titre 2
+        // 1- AFFICHAGE
         document.write ('<h2 style="background: orange;width: 50%;color: #fff;">1- Affichage</h2>');
 
         document.write ('<p>Page de test</p>')
@@ -82,7 +93,7 @@
         console.info(noteEval);
 
 
-        // titre 2
+        // 2- TYPES DE DONNEES
         document.write ('<h2 style="background: orange;width: 50%;color: #fff;">2- Affichage</h2>');
 
         var monTexte = 'Voici une phrase pour Audrey, avec l\'apostrophe';
@@ -91,7 +102,7 @@
         document.write(typeof(noteEval) + '<br>');
         document.write(typeof(monTexte) + '<br>');
 
-        // titre 3
+        // 3- CONSTANTES
         document.write('<h2 style="background: orange;width: 50%;color: #fff;">3- Constantes</h2>'); 
 
         // on ne peut pas la redéfinir
@@ -99,7 +110,7 @@
 
         document.write('<p style="background: grey;">' + BOUGE_PAS + '</p>')
 
-        // Titre 4 
+        // 4- CONCATENER 
         document.write('<h2 style="background: orange;width: 50%;color: #fff;" title="lr mot qui plaît à Adurey !">4- Concaténer</h2>');
         
         let prenom = 'Bruce', nom = 'Willis';
@@ -209,7 +220,7 @@
             if ( a > b && b > c ) {
                 document.write('<p>Pour a qui vaut '+ a +', b qui vaut '+ b +' et c qui vaut '+ c +'a est supérieur a b ET b est supérieur à C</p>');
             } else {
-                document.write('<p> Ici on teste si a '+ a +' est sup. à b ' + b +' ET si b est sup. à c '+ c +' mais dans ce cas au moins une des deux conditions n\est pas remplie</p>);
+                document.write('<p> Ici on teste si a '+ a +' est sup. à b ' + b +' ET si b est sup. à c '+ c +' mais dans ce cas au moins une des deux conditions n\est pas remplie</p>');
             }   
 
             // EXO : a est supérieur à b OU b est supérieur à c
@@ -217,9 +228,357 @@
             if (a > b || b > c) {
                 document.write('<p>Ici "on teste si A qui vaut '+ a +' est supérieur à B qui vaut'+ b +' ou si B est supérieure à c qui vaut '+ c +' : ici au moins une des deux conditions est vraie. </p>');
             } else {
-                document.write('<p>ici on teste l'égalité </p>')
+                document.write('<p>ici on teste </p>')
             }
 
+            // EXO isNan ... is not a number
+
+            var chiffre1 = 50, chiffre2 = '100', chiffre3 = 'vingt';
+            // quand on met les quotes '100' le contenu de notre var devient une chaîne de caractère
+
+            // pour faire le typeof() des var ci-dessus dans un console.info
+            
+            console.info(typeof chiffre1, chiffre2, chiffre3);
+
+            if ( isNaN(chiffre3)){//1- si la valeur testée n'est pas un nombre (dans le cas de chiffre2 qui est un string mais contenant des chiffres le code ne sera pas exécuté)
+                document.write('<p>Pour chiffre1 valeur '+ chiffre1 +' ce n\est pas un nombre!</p>');
+                
+            }
+
+            // inversions la condition is not a number isNaN
+
+            if ( !isNaN(chiffre3)) {
+                // si chiffre1(est-ce bien un nombre ? = !isNaN)
+                document.write('<p>Voyons voir' + chiffre3 + ' est bien un nombre</p>');
+            } else {
+                document.write('<p>Au contraire ' + chiffre3 +" n'est pas un nombre</p>"); 
+            }   
+
+            if ( !isNaN (chiffre1)) {//exécute le bloc de code suivant
+                document.write('<p>Voyons voir :' + chiffre1 + 'est bien un nombre</p>');
+            } else {//sinon exécute celui-ci
+                document.write('<p>Au contraire');
+            }
+
+            // EXO 1- récupérer dans une variable la réponse à la question suivante ; "Parmi ces couleurs, le vert, le bleu, le rouge, le orange, quelle est votre couleur préférée ?"
+
+            let quelleCouleur = prompt('Parmi ces couleurs, le vert, le bleu, le rouge, le orange, quelle est votre couleur préférée?');
+            console.info(quelleCouleur);
+        
+        // console.log(votreCouleur);
+        // document.write(votreCouleur);
+        
+        
+
+        // 2- ensuite faites une condition pour afficher selon la réponse votre couleur préféré est le vert ou le bleu ou le orange
+
+        if (quelleCouleur == 'vert') {
+            document.write('<p>Votre couleur préféré est le vert</p>')
+        } else if(quelleCouleur == 'bleu') {    
+            document.write('<p>Votre couleur préféré est le bleu</p>')
+        } else if(quelleCouleur == 'orange') {
+            document.write('<p>Votre couleur préféré est le orange</p>')
+        } else {
+
+        }
+
+        // Suite 3- la même chose en switch
+
+        switch(quelleCouleur) {
+
+            case 'vert':
+               document.write('<p>Votre couleur préféré est le vert</p>');
+            break;
+
+            case 'bleu':
+                document.write('<p>Votre couleur préféré est le vert</p>');
+            break;
+
+            case 'orange':
+                document.write('<p>Votre couleur préféré est le orange</p>');
+            break;
+            
+            default:
+                document.write('<p>choissisez une couleur svp</p>');
+
+            }
+
+            // 7- Boucles
+            document.write('<h2>7- Boucles</h2>');
+
+            // EXO boucle while tant que la var. w1 = 0 est inférieur ou égal a 15 ecrivez "w1 = x puis w1 = x+1 etc..."
+
+            let w1 = 0; //variable intialisé à 0 
+
+            while (w1 <= 15){ // tant que test est vrai
+                document.write('w1 égal à ' + w1 +  'puis w1 +1 =><br>' ); //bloc de code à exécuter
+                w1++;// incrémentation après le bloc de code qui vient d'être exécuter avec while
+            }// fin de la while loop
+
+            // EXO FOR var for1 = 0 et qui est <= 10
+
+            for (var for1 = 0; for1 <= 10; for1++){ //1- initialisation de la variable for1; 2- Test de la condition; 3- Incrémentation;
+                document.write('for1 est égal à ' + for1 + 'avant incrémentation puis à ' + (for1 + 1) + ' après incrémentation<br>');
+            }
+
+            // EXO 1- une boucle for = 0, for2 <=10 et on écrit "la variable for2 contient X à chaque passage de la boucle".
+
+            // EXO 2- avec if else rajouter à la fin de la boucle " et la boucle se termine là." 
+
+            for (let for2 = 0; for2 <= 10; for2++){ // initialisation de la variable, test de la condition et post-incrémentation
+                if (for2 == 10){ // if else
+                    document.write('la variable for2 contient '+ for2 +' et la boucle se termine là');
+                } else {
+                    document.write('la variable for2 contient '+ for2 +' à chaque passage de la boucle,<br>');
+                } // fin if else
+            }   // fin de la boucle
+
+            for (for2 = 0; for2 <= 10; for2++){
+                    if(for2 < 10){
+                        document.write('<p>La variable for2 contient ' + for2 + ', incrémenté à chaque passage de la boucle : ' + for2 + ' + 1 = '+ (for2 + 1) +'.</p>');
+                    }else{
+                        document.write('<p>La variable for2 contient ' + for2 + ', la boucle s\arrête ici.</p>');
+                    } // fin de if else
+                } // fin de for
+
+                document.write('<hr>');
+
+                //8- Fonctions prédefinies et utilisateur
+                document.write
+
+                var phrase1 = "ne criez pas s'il vous plait !";
+
+                var phrase2 = 'COUCOU !'
+
+                // toUpperCase()
+                console.log(phrase1.toUpperCase());
+                document.write(phrase2.toUpperCase());
+
+                // lenght
+                var phrase3 = 'My name is Bond, James Bond.';
+                console.log(phrase3.length);
+
+                document.write('test dans la phrase suivante <span class="stabilo">' + phrase3 + '</span> Il y a ' + phrase3.length + ' caractères dans cette variable.'); 
+
+                document.write('<hr>');
+
+                // création d'une fonction
+                function maFonction() {
+                    return document.write('<p>Il fait beau</p>');
+                }
+
+                maFonction ();//ici on appelle la fonction
+
+                // Autre fonction
+
+                function uneAlerte() {
+                    return alert('Bonjour');
+                }
+
+                uneAlerte();
+
+                function direBonjour(prenom) {
+                    var message = document.write('<p>Bonjour' + prenom + '.Comment vas-tu? </p>');
+                }
+
+                var prenom2 = prompt('Votre prénom');
+
+                direBonjour('Toto');
+
+                function faireCoucou(prenom2) {
+                    var coucou = document.write('<p>Coucou' + prenom2 + '.Comment vas-tu? </p>');
+                    return coucou;//envoie la variable
+                }
+
+                faireCoucou(prenom2);//appel de fonction avec l'argument 
+
+                // EXO > demander "Quelle est la saison?" et "Quelle est la temperature" et faites une fonction meteo() qui renvoit les réponses à ces questions
+
+                // EXO : demander la saison et la température et faite une fonction meteo 
+                
+                var saison = prompt('Quelle est la saison ?');
+                    
+                var temperature = prompt('Combien de degrés fait-il ?');
+                    
+                // VERSION 1 , version simple
+                    
+                function meteo1(saison, temperature) {// notre fonction avec 2 arguments qui viennent des var ci-dessus                          
+                
+                var phrase4 = document.write('<p>Nous sommes en ' + saison + ' et il fait ' + temperature + '°.</p>');             
+                return phrase4;         
+                    }//fin fonction meteo
+
+                    meteo1(saison, temperature);
+
+                    // VERSION 2 avec "if else"
+                    function meteo2(saison,temperature) { // notre fonction avec deux arguments qui viennent des var ci dessus. 
+                        if(saison == 'printemps') { // si la variable contient bien printemps
+                            var phrase4 = document.write('<p>Nous sommes en ce moment au '+ saison + ' et il fait ' + temperature + '°.</p>'); // exécute ce bloc de code
+                        }else{ // sinon c'est faux 
+                            var phrase4 = document.write('<p>Nous sommes en ce moment en '+ saison + ' et il fait ' + temperature + '°.</p>'); // exécute cet autre bloc de code
+                        } // fin du if else
+                        return phrase4
+                    } // fin de la fonction
+                    meteo2(saison,temperature);
+                    // VERSION 3 avec une variable "article"
+
+                    function meteoVar(saison,temperature) {
+                        var article ; //  la variable article est vide et attend une condition
+                            if (saison == 'printemps') {
+                                article = 'au ';
+                            }else{
+                                article ='en ';
+                        } // fin du if else
+                        return document.write('<p>Nous sommes '+ article + saison + ' et la température est de ' + temperature + '°.</p>');
+                    } // fin fonction meteo3 
+                    meteoVar(saison, temperature);
+ 
+                    // 4ème version l'utilisateur rentre printemps très bien // hiver très bien si il rentre n'importe quoi on lui dit 'cette saison n'existe pas'
+                    // en utilisant la fonction replace() ???
+                    
+                    function meteoFin () {
+
+                    
+                    var article2; //la variable article est vide et attend une condition
+                        if (saison == 'printemps') {// si c'est le printemps
+                            article2 = 'au';//on affecte "au" à la variable
+                        } else if (saison == 'hiver' || saison =='été' || saison == 'automne') {
+                            article2 = 'en';
+                        } else {
+                            document.write('<p>4- La saison' + saison + "n'existe pas.</p>");
+                        }
+                        // fin du if else
+                        return document.write('5- Nous sommes' + article2 + saison + ' et la température est de ' + temperature + '°.');
+                    }
+                    
+                    // meteoFin (saison, temperature);
+
+                    // Nouvelle condition
+                    // 6 et 11 --> primaire
+                    // 11 et 15 --> collège
+                    // 15 et 18 --> lycée
+                    // 18 ou + --> chômage
+                    // 
+                    
+
+                    // sonAge = prompt('Etes vous en âge scolaire?');
+                    // if ( sonAge >= 6 && sonAge < 11 ) {
+                    //     document.write ('<p>Vous êtes en primaire</p>');
+                    // } else if ( sonAge >= 11 && sonAge < 15 ) {
+                    //     document.write('<p>Vous êtes au collège</p>');
+                    // } else if ( sonAge >= 15 && sonAge < 18 ) {
+                    //     document.write('<p>Vous êtes au lycée');
+                    // } else if (sonAge >= 18) {
+                    //     document.write('<p>Vous êtes au chômage');
+                    // } else {
+                    //     document.write("Vous n'avez pas renseigné un âge valide");
+                    // }
+                    // console.log(sonAge);
+
+
+                    function quelleEcole (sonAge) {
+                        if ( sonAge >= 6 && sonAge < 11 ) {
+                        var ecole = document.write ('<p>Vous êtes en primaire</p>');
+                    } else if ( sonAge >= 11 && sonAge < 15 ) {
+                        document.write('<p>Vous êtes au collège</p>');
+                    } else if ( sonAge >= 15 && sonAge < 18 ) {
+                        document.write('<p>Vous êtes au lycée');
+                    } else if (sonAge >= 18) {
+                        document.write('<p>Vous êtes au chômage');
+                    } else {
+                        document.write("Vous n'avez pas renseigné un âge valide");
+                    }// fin condition multiple
+                    return ecole;
+                    }// fin function
+
+                    quelleEcole (sonAge); //appel de fonction
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+                    // AVEC REPLACE (IF ELSE)
+                    // function meteoReplace(saison, temps) {//Notre fonction avec 2 arguments qui viennent des var ci-dessus
+                    //     if (saison == 'printemps') {//"if", si saison comporte le mot "printemps" alors exécute ce bloc de code
+                    //         var phrase5 = document.write('<p>Nous sommes au ' + saison + 'et il fait ' + temps + '.</p>');
+
+                    //     } else {
+                    //         var phrase6 = phrase5.replace('au','en');
+                    //     }
+                    //     return phrase6;
+
+                    // }
+                    // meteoReplace (saison, temperature);
+
+                    // VERSION 4
+
+
+                    // // AVEC REPLACE (IF ELSE)
+                    // function meteoReplace (saison,temps) {//Notre fonction avec arguments qui viennent des var ci-dessus
+                        // }
+
+                        if (saison == 'automne'||saison == 'hiver'||saison == 'été'||saison =='printemps') {
+                            document.write('<p>Vous avez choisi la saison' + saison + '.</p>');
+                        } else {
+                            document.write('<p>Vous avez choisi la mauvaise valeur</p>');
+                        }
+                        
+                        
+                        // if (saison == 'printemps') {// si la variable contient bien 'printemps' est-ce VRAI ?
+        //     document.write('<p>2- Nous sommes au ' + saison + ' et il fait ' + temperature + '°.</p>');// exécute ce bloc de code
+        // } else if (saison == 'hiver' || saison =='été' || saison == 'automne') {//sinon (c'est faux il n'y a pas printemps)
+        //     document.write('<p>2- Nous sommes en ' + saison + ' et il fait ' + temperature + '°.</p>');// exécute cet autre bloc
+        // } else {
+        //     document.write('<p>La saison "' + saison + '" n\'existe pas .</p>');// exécute cet autre bloc
+        // }
+
+        // 4ème version function
+         
+        function meteoIfElseIfElse(saison, temperature) {
+            if (saison == 'printemps') {// si la variable contient bien 'printemps' est-ce VRAI ?
+                    var phraseNew = document.write('<p>4- Nous sommes au ' + saison + ' et il fait ' + temperature + '°.</p>');// exécute ce bloc de code
+                } else if (saison == 'hiver' || saison =='été' || saison == 'automne') {//sinon (c'est faux il n'y a pas printemps)
+                    var phraseNew = document.write('<p>- Nous sommes en ' + saison + ' et il fait ' + temperature + '°.</p>');// exécute cet autre bloc
+                } else {
+                    var phraseNew = document.write('<p>4- La saison "' + saison + '" n\'existe pas .</p>');// exécute cet autre bloc
+                }//fin if else if else
+            return phraseNew;
+        }//fin fonction
+
+        meteoIfElseIfElse(saison, temperature);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    meteoIfElseIfElse(saison, temperature)
+
+
+                    
     </script>
 </head>
 <body>

@@ -12,7 +12,7 @@ let f = 5 % 3;
 let g = 2 ** 3;
 
 console.log('a => ',a,', b => ',b,', c => ', c)
-console.log(f)
+console.log(e);
 console.log('2 ** 3 = ',g)
 
 // alert('a contient le résultat : ' + a + 
@@ -26,11 +26,14 @@ console.log('2 ** 3 = ',g)
 let h =  1 - 2 - 3;
 // print
 console.log(h)
+
+// le calcul dans j se fait de  droite à gauche
 let j= 2 ** 3 ** 2;
-// le calcul dans j se fait de  droite à gauch
 console.log(j)
+
 let k = 1 + 4 -5;
 console.log(k)
+
 let l = 1- (2 * 3);
 console.log(l)
 
@@ -54,7 +57,7 @@ console.log(somme);
 // console.log(typeof prenom);
 
 let m = 20;
-m +=15;  // on ajoute 15 à la valeur stockée
+m += 15;  // on ajoute 15 à la valeur stockée
 console.log(m);
 
 let o = 50;

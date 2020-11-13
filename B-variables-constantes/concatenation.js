@@ -5,9 +5,9 @@
 let monAge = 22;
 
 // caractère d'échappement '\' ou anti-slash
-let phrase = 'Bonjour j\'ai '
+let phrase = 'Bonjour j\'ai '+ monAge + ' ans.';
 
-console.log(monAge, phrase);
+console.log(phrase);
 
 // alert(phrase + monAge + ' ans.');
 
@@ -19,20 +19,23 @@ let x = 501;
 let y = 99;
 
 // concaténer une chaîne de caractères et des variables 
-
+// pour sauter une ligne \n
 alert('x contient ' + x + 
     '\n y contient' + y +
     '\n leur somme est égale à ' + (x + y));
+
 
 // ici en littéraux de gabarits
 // alert (`x contient ${x}
 // y contient ${y}
 // leur somme est égale à 
-)
 
 alert(`x contient ${x}
  y contient${y}
  leur somme est égale à ${x + y}`);
 
-alert(`x contient `)
+alert(`x contient ${x}`);
+
+
+
 

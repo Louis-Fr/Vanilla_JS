@@ -6,7 +6,7 @@ console.log(prenom);
 prenom = "Laure";
 console.log(prenom);
 
-const nom = "Rey"
+const nom = "Rey";
 // ce qui suit > je n'ai pas le droit
 // nom = "Semedo";
 
@@ -18,11 +18,12 @@ console.log(nom);
 
 // on ne peut pas faire :
 // const pays;
-// pays = "France" ;
+// pays = "France";
+// On déclare et on initialise la constante en même temps
 
 // on doit faire
 const pays = "France";
 
 const ville = "Bastia";
 
-console.log(pays);
+console.log(ville);

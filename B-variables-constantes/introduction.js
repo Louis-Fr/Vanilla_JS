@@ -7,7 +7,7 @@ let MonAge;
 var ville;
 
 // ici on déclare une variable et on l'intialise en même temps
-let prenom = 'Jean'; 
+let prenom2 = 'Jean'; 
 
 // string : chaîne de caractères
 
@@ -20,24 +20,24 @@ monAge = 40;
 
 // quand la variable est un chiffre, pas besoin de '' !
 
+console.log(prenom2);
+console.log(monAge);
+
+prenom = 25;
+prenom ='Justine';
+prenom = 'Antoine';
+
+// c'est la dernière valeur affecté qui est prise en compte ici 'Antoine'
 console.log(prenom);
-console.log(monAge);
-
-prenom='25';
-prenom='Justine';
-
-console.log(monAge);
 
 // ceci ne fonctionne pas, on déclare toujours la variable avant la valeur
 // nom='Rey';
 // var nom;
 
-console.log(nom);
 
-// ceci ne fonctionne pas
-let ville='Suresnes';
+let ville2 = 'Suresnes';
 
-console.log(ville);
+console.log(ville2);
 
 // avec prompt() on a une fenêtre avec champ de saisie
 // prompt ();
@@ -45,8 +45,8 @@ console.log(ville);
 // redéclaration des variables
 
 // ceci fonctionne 
-var chien='Médor'
-var chien='Max'
+var chien='Médor';
+var chien='Max';
 
 console.log(chien);
 
