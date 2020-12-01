@@ -306,6 +306,17 @@
             // 7- Boucles
             document.write('<h2>7- Boucles</h2>');
 
+            // EXO perso while
+
+            let valeur = 10;
+
+            while ( valeur > 5){
+                document.write('valeur est égale à ' + valeur +' .<br>'); 
+               valeur--;
+            }
+
+
+
             // EXO boucle while tant que la var. w1 = 0 est inférieur ou égal a 15 ecrivez "w1 = x puis w1 = x+1 etc..."
 
             let w1 = 0; //variable intialisé à 0 
@@ -556,6 +567,34 @@
 
         meteoIfElseIfElse(saison, temperature);
 
+        // vérifier que contenu au dessus soit bien dans cette page
+
+        // 9-Supplément
+
+        document.write('<h2 style="background: orange; width: 50%; color: #fff;">9- Suppléments</h2>')
+
+        // ParseInt
+        // ParseInt permet de changer le type, transformer un string en number
+
+        var chiffreNew = '100'; // une string
+
+        console.log(typeof chiffreNew);// confirmation que nous avons une string
+
+        var parse = parseInt(chiffreNew); //pour change le type de la variable ChiffreNew on le passe dans une nouvelle variable dans laquelle on utilise la fonction parseInt()
+
+        console.log(typeof parse); // cette nouvelle variable est de type number
+
+        var chiffreNew2 = 50;
+
+        console.log(parse + chiffreNew2); // ici on additionne
+
+        var chiffreNew3 = 182.7635;
+        console.info(parseInt (chiffreNew3));
+
+        // parseFloat () transforme une string en number en prenant en compte après la virgule
+        var chiffreNew4 = '10.23689';
+
+        console.log(parseFloat (chiffreNew4));
 
 
 
@@ -575,7 +614,9 @@
 
 
 
-                    meteoIfElseIfElse(saison, temperature)
+
+
+                  
 
 
                     

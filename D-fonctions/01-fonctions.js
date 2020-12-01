@@ -1,12 +1,12 @@
 // les fonctions introduction
 
-// exemple la fonction random( "aléatoire")
+// exemple la fonction random("aléatoire")
 
 document.getElementById('p1').innerHTML = Math.random(); 
 
 console.log(Math.random());
 
-// fuction replace()
+// fonction replace()
 
 let discours1 ="Bonjour, je suis Donald Trump, et j'ai gagné!";
 
@@ -30,11 +30,11 @@ document.getElementById('p3').innerHTML = randomX100();
 //2- une simple mutiplication
 
 function multiplier(nbr1, nbr2) {
-    return ('Multiplions ' + nbr1 + 'X' +  nbr2 + ' = ' + (nbr1 * nbr1) );
+    return ('Multiplions ' + nbr1 + 'X' +  nbr2 + ' = ' + (nbr1 * nbr2) );
 }
 
 console.log(multiplier(2,6));
-document.getElementById('p4').innerHTML = multiplier(145,9);
+document.getElementById('p4').innerHTML = multiplier(2,6);
 
 // soustraction
 function soustraire(nbr1, nbr2){
@@ -56,3 +56,19 @@ function addition (nbr1, nbr2){
 console.log(addition(10,10));
 // modulo
 
+
+// EXERCICE PERSO
+// Création d'une fonction qui compare les valeurs
+
+// function comparer(valeur1, valeur2){
+//     return ('comparer ' + valeur1 + ' et ' + valeur2 + ' = ' + (valeur1 == valeur2));
+// }
+
+// console.log(comparer(7,7));
+
+
+// function type(type1, type2){
+//     return ('compare le type de ' + type1 + ' et ' + type2 + ' = ' + (type1 === type2));
+// }
+
+// console.log(type (20,'20'));

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>D - 02 Portée</title>
     <link rel="stylesheet" href="../css/style.css">
     <!-- script en externe -->
     <!-- async permet de déferer le chargement de la page, c'est a dire qu'il va d'abord charger le html pour ensuite lancer la page du JS ce qui permet trouver les id dans la page. -->
@@ -13,17 +13,22 @@
     <div id="wrapper">
         <h1>JS - D 02 Portée des variables</h1>
         <h2>1- Définition</h2>
-        <p>En JS il existe deux espaces de portée différents : l'espace global et l'espace local.</p>
+        <p>En JS les variables peuvent être de portée :  <mark>GLOBALES</mark> ou <mark>LOCALES</mark>.</p>
         <ul>
-            <li>L'espace global désigne l'entiereté d'un script, à l'exception de l'intérieur des fonctions.</li>
-            <li>L'espace local désigne, à l'inverse, l'espace dns une fonction</li>
+            <li>La portée <strong>global</strong> désigne une variable acessible partout dans le script, sauf dans une fonction.</li>
+            <br>
+        <li>La portée <strong>local</strong> désigne une variable  acessible seulement à l'intérieur d'une fonction.</li>
         </ul>
 
         <h3>Exemples :</h3>
         <p id="p1"></p>
+        <br>
         <p id="p2"></p>
+        <br>
         <p id="p3"></p>
+        <br>
         <p id="p4"></p>
+        <br>
         <p id="p5"></p>
 
         

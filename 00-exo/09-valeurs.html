@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 - Valeurs</title>
+    <style>
+        body {
+            background-color: #333333;
+            color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Valeurs finales</h1>
+    <br>
+    <h3>Examinez le programme valeurs.js ci-dessous :</h3>
+    <hr>
+    <br>
+    <p>var nb1 = Number (prompt("Entrez nb1 :")); </p>
+    <p>var nb2 = Number (prompt("Entrez nb1 :"));</p>
+    <p>var nb3 = Number (prompt("Entrez nb1 :"));</p>
+    
+    <br>
+    <br>
+
+    <p><code> if (nb1 > nb2) {<br>
+        nb1 = nb3 *2;<br>
+    } else {<br>
+        nb1++;<br>
+        if (nb1 > nb3) {<br>
+            nb1 = nb1 + nb3;<br>
+        } else {
+            nb1 = 0;
+            nb3 = nb3 * 2 + nb2;
+        }
+    }
+    
+    </code></p>
+    <br>
+    <p>Avant de l'éxecuter, tentez de prévoir les valeurs finales des variables nb1, nb2 et nb3 en fonction de leurs valeurs initales et complétez le tableau ci-dessous.</p>
+    <br>
+    <table>
+        
+    </table>
+    <br>
+    <h3>Résultat :</h3>
+    <hr>
+    <br>
+    <p>le nombre 1 vaut au final : 0</p>
+    <p>le nombre 2 vaut au final : 7</p>
+    <p>le nombre 3 vaut au final : 21</p>
+
+    <script src="valeurs.js" async></script>
+</body>
+</html>

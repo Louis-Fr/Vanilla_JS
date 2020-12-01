@@ -13,12 +13,13 @@ let alerte = function () {
     alert ('Alerte exécutée par une fonction anonyme')
 }
 
-// toujours "appeler" la fonction anonyme sinon erreur dans la porsuite du script
+// toujours "appeler" la fonction anonyme sinon erreur dans la poursuite du script
 alerte ();
 
 // auto-invocation d'une fonction anonyme
-// cela ne fonctionne pas
 
+
+// cela ne fonctionne pas
 // function () {
 //     alert('Alerte !!!! Seconde exécution d\'une fonction anonyme');
 // }
@@ -47,12 +48,12 @@ paragraphe2.addEventListener('click', function (){
 // fonction récursive 
 
 function decompte(t) {
-    if (t > 0){
-        document.getElementById('p3').innerHTML += t + '<br>';
+    if (t > 0){ // si 't' est strictement inférieur à 0
+        document.getElementById('p3').innerHTML += t + '<br>'; // on additionne puis affecte le résultat et on l'affiche dans le html
         return decompte (t - 1);
     } else {
         return t;
     } //fin if else
 }// fin function
 
-decompte(150);
+decompte(5);

@@ -14,25 +14,31 @@
     <div id="wrapper">
 
         <h1>JS - III 06 Les opérateurs logiques</h1>
-                                    
+        <br>
+        <br>
+        <!-- a travailler -->
+        <p>Dans cette condition on utilise un deuxième couple de parenthèses pour être sûr que l'opérateur ! porte bien sur le résultat de la comparaison x <= 2 et non pas seulement sur x, ce qui produirait un résultat différent.</p>
+        <br>
         <code>if( ! (x <= 2) ) {<br>
             document.getElementById('p3').innerHTML = 'x contient une valeur strictement supérieure à 2';<br>
         }</code>
+        
+        <p>Le JS va d'abord traiter tel opérateur, puis tel autre. Dans cet exemple il traite d'abord ce qui est à droite dans la parenthèse.</p>
 
-        <p>Noter que dans cette condition on utilise un deuxième couple de parenthèses pour être sûr que l'opérateur ! porte bien sur le résultat de la comparaison x <= 2 et non pas seulement sur x, ce qui produirait un résultat différent.</p>
-
-        <p>En fait JS va d'abord traiter tel opérateur, puis tel autre. Dans cette exmple il traite d'abord ce qui est à droite dans la parenthèse ...</p>
-
-        <p>Cet ordre de priorité est appelé « précédence ». En plus de cela, vous devez également savoir que les opérateurs vont avoir différents sens d'associativité. <br>L'associativité détermine l'ordre dans lequel des opérateurs de même précédence sont évalués et va pouvoir se faire par la droite ou par la gauche. Une associativité par la gauche signifie qu'on va commencer réaliser les opérations en partant de la gauche et vers la droite tandis qu'une associativité par la droite signifie qu'on va commencer par la droite.</p>
-
-        <p>Avant cela, voici un tableau classant les différents opérateurs vus jusqu'à présent (et quelques autres que nous allons voir très  vite) de la plus haute (0) à la plus basse précédence (10), c'est-à-dire selon leur ordre de traitement par le JavaScript.</p>
+        <p>Cet ordre de priorité est appelé « précédence ». En plus de cela, vous devez également savoir que les opérateurs vont avoir différents sens d'associativité.
+        <br>L'associativité détermine l'ordre dans lequel des opérateurs de même précédence sont évalués et va pouvoir se faire par la droite ou par la gauche.
+        <br> 
+        Une associativité par la gauche signifie qu'on va commencer a réaliser les opérations en partant de la gauche vers la droite tandis qu'une associativité par la droite signifie qu'on va commencer par la droite.</p>
+        <br>
+        <p>Voici un tableau classant les différents opérateurs de la plus <mark>haute (0)</mark> à la plus <mark>basse</mark> précédence <mark>(10)</mark>, c'est-à-dire selon leur ordre de traitement par le JavaScript.</p>
+        <br>
         <table>
-            <caption>Précédence</caption>
+            <caption><strong>Ordre de Précédence en JS</strong></caption>
             <thead>
                 <tr>
-                    <td>Précédence</td>
-                    <td>Opérateur (nom)</td>
-                    <td>Opérateur (symbole)</td>
+                    <td><strong>Précédence</strong></td>
+                    <td>Opérateur</td>
+                    <td>Symbole</td>
                     <td>Associativité</td>
                 </tr>
             </thead>
@@ -65,7 +71,7 @@
                     <td>2</td>
                     <td>Pré-incrémentation</td>
                     <td>++ ...</td>
-                    <td>droite</td>
+                    <td>Droite</td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -183,8 +189,11 @@
                 </tr>
             </tbody>
         </table> 
-        <p class="stabilo">L'important ici est de de souvenir qu'il existe une précédente et des règles d'associativité lorsqu'on utilise des opérateurs et d'aller  vérifier l'ordre et le sens de traitement des opérateurs en cas de doute. Dans tous les cas, vous finirez par connaitre ce tableau à force de pratique.</p>
-        <p>Exemples</p>
+        <br>
+        <br>
+        <p class="stabilo">L'important ici est de de souvenir qu'il existe une précédence et des règles d'associativité quand on utilise des opérateurs et d'aller vérifier l'ordre et le sens de traitement des opérateurs en cas de doute. Dans tous les cas, vous finirez par connaitre ce tableau à force de pratique.</p>
+        <br>
+        <p>Exemples :</p>
         <ul>
             <li id="v1"></li>
             <li id="v2"></li>
@@ -203,17 +212,21 @@
             <li>OU logique ;</li>
             <li>inférieur strict.</li>
         </ul>
-        <p>En utilisant la précédence, on sait que l'opérateur d'addition va être traité en premier, puis ensuite ce sera le tour des opérateurs d'infériorité et de supériorité (strict ou égal), puis celui du ET logique et enfin du OU logique.</p>
-        <p>Ici, le JavaScript va donc commencer par traiter le bloc   qui est égal à 20 + (-20) = 20 – 20 = 0. Ensuite, le JavaScript traite les trois comparaisons x >= 0, x <= 10 et y < 0 et renvoie true ou false à chaque fois.</p>
-        <p>Dans le cas présent, le JavaScript va renvoyer true (let x contient bien une valeur supérieure ou égale à 0), false (la valeur de let x n'est pas inférieure ou égale à 10) et true (let y contient bien une valeur strictement négative).
-            <br>L'opérateur && va être traité à son tour. Cet opérateur renvoie true si les deux opérandes renvoient true et false dans le cas contraire. Dans le cas présent, on a true && false. Le bloc   va donc être évalué à false.
-            20 + y
-            x >= 20 + y && x <= 10
-            <br>Finalement, l'opérateur || va être analysé. Pour que cet opérateur renvoie true, il suffit que l'un des deux opérandes renvoie true. Ici, on a false || true en se basant sur les résultats trouvés précédemment et c'est donc la valeur true qui est finalement renvoyée pour l'entièreté du test et le code dans notre condition est bien exécuté.</p>
+        <br>
+        <p>En utilisant la précédence, on sait que l'opérateur d'addition va être traité en premier, puis ce sera le tour des opérateurs d'infériorité et de supériorité (strict ou égal), puis celui du <strong>ET logique</strong> et enfin du <strong>OU logique</strong> .</p>
+        <p>Ici, le JavaScript va donc commencer par traiter le bloc qui est égal à <strong> 20 + (-20) = 20 – 20 = 0</strong>.
+        <br> 
+        Ensuite, le JS traite les trois comparaisons <strong> x >= 0, x <= 10 et y < 0</strong> et renvoie true ou false à chaque fois.</p>
+        <p>Ici le JavaScript va renvoyer true (x contient bien une valeur supérieure ou égale à 0), false (la valeur de x n'est pas inférieure ou égale à 10) et true (y contient bien une valeur strictement négative).
+            <br>L'opérateur && va être traité à son tour. Cet opérateur renvoie true si les deux opérandes renvoient true et false dans le cas contraire. Dans le cas présent, on a true && false. Le bloc va donc être évalué à false.
+            <strong>20 + y x >= 20 + y && x <= 10</strong> 
+            <br>Finalement, l'opérateur <strong>||</strong> va être analysé. Pour que cet opérateur renvoie true, il suffit que l'un des deux opérandes renvoie true. Ici, on a false || true en se basant sur les résultats trouvés précédemment et c'est donc la valeur true qui est finalement renvoyée pour l'entièreté du test et le code dans notre condition est bien exécuté.</p>
+            <br>
             <hr>
         <p id="p2"></p>
         <p id="p3"></p>
-        
+            <br>
+            <br>
     </div><!-- fin wrapper -->    
      
 </body>

@@ -9,19 +9,19 @@ let a = 10, b = 10, c = 20, d = 20;
 console.log(a); 
 
 // a++ va incrémenter (ajouter 1) après la valeur 
-document.getElementById('p1').innerHTML = 'a contient la valeur' + a + ', là je vais post-incrémenter de 1, ce qui fait toujours a = ' + a++ + 'et après ça fera a = ' + a; 
+document.getElementById('p1').innerHTML = ('<strong>a</strong> contient la valeur ' + a + ' on va post-incrémenter de 1, donc <strong>a</strong> = ' + a++ + ' puis ensuite = ' + a); 
 
 console.log(b);
 
-document.getElementById('p2').innerHTML = 'b contient la valeur' + b + ' là je vais pré-incrémenter avant, donc maintenant b contient' + ++b;
+document.getElementById('p2').innerHTML = '<strong>b</strong> contient la valeur ' +  b + ' on va pré-incrémenter avant, donc maintenant <strong>b</strong> contient ' + ++b;
 
 console.log(c);
 
-document.getElementById('p3').innerHTML = 'c contient la valeur' + c + 'on post-décrémente de 1, donc c est toujours égal à' + c-- + ' et donc après c sera égal à ' + c;
+document.getElementById('p3').innerHTML = '<strong>c</strong> contient la valeur ' + c + ' on post-décrémente de 1, donc <strong>c</strong> est toujours égal à ' + c-- + ' puis après <strong>c</strong> sera égal à ' + c;
 
 console.log('c');
 
-document.getElementById('p4').innerHTML = 'd contient la valeur ' + d + ', là je pré-décrémente de 1, donc d est égal à' + --d;
+document.getElementById('p4').innerHTML = '<strong>d</strong> contient la valeur ' + d + ' , là je pré-décrémente de 1, donc <strong>d</strong> est égal à' + --d;
 
 console.log(d);
 
@@ -56,7 +56,7 @@ while ( w2 < 10 ){
 let w3 = 0;
 
 do { //fait
-    document.getElementById('while3').innerHTML += 'Regarder w3 contient la valeur' + w3 '<br>'.; 
+    document.getElementById('while3').innerHTML += 'w3 contient la valeur ' + w3 + ' <br>'; 
     +w3++; //incrémente 
 }
 while ( w3 <= 10){ //tant que le test est vrai
